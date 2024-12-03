@@ -56,7 +56,19 @@ def main():
     
     if api_key:
         client = setup_openai_api_key(api_key)
-        recorded_audio = audio_recorder()
+        
+        # Configure audio recorder with extended duration and visual feedback
+        recorded_audio = audio_recorder(
+            pause_threshold=200.0,  # Increased pause threshold to 120 seconds
+            # sample_rate=44100,      # High-quality audio
+            # energy_threshold=0.01,   # Lower energy threshold for better sensitivity
+            text="Click to record",
+            recording_color="#e74c3c",
+            neutral_color="#2ecc71",
+            icon_name="microphone",
+            icon_size="2x"
+        )
+        
         if recorded_audio:
             status_placeholder = st.empty()
             status_placeholder.text("Transcribing audio...")
