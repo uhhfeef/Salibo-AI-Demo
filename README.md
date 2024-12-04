@@ -68,24 +68,3 @@ streamlit run app.py
 
 The application uses a system prompt template defined in `prompts.py` which can be customized to modify the AI's response format and style.
 
-## Security Notes
-
-- Never commit your OpenAI API key to version control
-- The application stores the API key only in session state
-- Audio recordings are processed temporarily and not stored permanently
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Support
-
-For support, please open an issue in the GitHub repository or contact the maintainers.
