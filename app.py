@@ -5,7 +5,10 @@ import base64
 from prompts import SYSTEM_PROMPT
 
 def setup_openai_api_key(api_key):
-    return openai.OpenAI(api_key=api_key)
+    client = openai.OpenAI(
+        api_key=api_key
+    )
+    return client
 
 def transcribe_audio(client, audio_path):
     with open(audio_path, "rb") as f:
